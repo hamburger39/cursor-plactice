@@ -1,37 +1,26 @@
-import Image from "next/image";
-import Head from 'next/head';
-
-<Head>
-  <title>平林佳祐 | フロントエンドエンジニア</title>
-  <meta name="description" content="Next.jsとTypeScriptを使った自己紹介ページ" />
-</Head>
-
-
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 p-6 transition-colors duration-200">
+      <ThemeToggle />
       <header className="mb-8 flex flex-col items-center">
-        <Image
-          src="/profile.png"
-          alt="平林佳祐のプロフィール画像"
-          width={120}
-          height={120}
-          className="rounded-full border-4 border-blue-300 shadow-lg mb-4"
-        />
-        <h1 className="text-3xl text-gray-600 font-bold mb-2">平林 佳祐</h1>
-        <p className="text-gray-600 text-center text-sm sm:text-base">フロントエンドエンジニア / Next.js & TypeScript</p>
+        <div className="w-30 h-30 rounded-full border-4 border-blue-300 dark:border-blue-500 shadow-lg mb-4 transition-colors duration-200 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+          <span className="text-white text-4xl font-bold">平</span>
+        </div>
+        <h1 className="text-3xl text-gray-600 dark:text-gray-200 font-bold mb-2 transition-colors duration-200">平林 佳祐</h1>
+        <p className="text-gray-600 dark:text-gray-300 text-center text-sm sm:text-base transition-colors duration-200">フロントエンドエンジニア / Next.js & TypeScript</p>
       </header>
-      <main className="w-full max-w-xl bg-white rounded-lg shadow-md p-6 mb-8">
+      <main className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8 transition-colors duration-200">
         <section className="mb-6">
-          <h2 className="text-xl text-gray-600 font-semibold mb-2 border-l-4 border-blue-400 pl-2">自己紹介</h2>
-          <p className="text-gray-700">
+          <h2 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 border-l-4 border-blue-400 dark:border-blue-500 pl-2 transition-colors duration-200">自己紹介</h2>
+          <p className="text-gray-700 dark:text-gray-300 transition-colors duration-200">
             Web開発初心者のエンジニアです。Next.jsやTypeScriptを中心に、ユーザー体験を重視した開発を行っています。
           </p>
         </section>
         <section className="mb-6">
-          <h2 className="text-xl text-gray-600 font-semibold mb-2 border-l-4 border-blue-400 pl-2">スキル</h2>
-          <ul className="list-disc list-inside text-gray-700">
+          <h2 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 border-l-4 border-blue-400 dark:border-blue-500 pl-2 transition-colors duration-200">スキル</h2>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-200">
             <li>Next.js / React</li>
             <li>TypeScript / JavaScript</li>
             <li>TailwindCSS / CSS</li>
@@ -39,8 +28,8 @@ export default function Home() {
           </ul>
         </section>
         <section>
-          <h2 className="text-xl text-gray-600 font-semibold mb-2 border-l-4 border-blue-400 pl-2">実績</h2>
-          <ul className="list-disc list-inside text-gray-700">
+          <h2 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 border-l-4 border-blue-400 dark:border-blue-500 pl-2 transition-colors duration-200">実績</h2>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-200">
             <li>ポートフォリオサイト制作</li>
             <li>企業向けWebアプリ開発</li>
           </ul>
@@ -51,7 +40,7 @@ export default function Home() {
           href="https://twitter.com/your_twitter"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black hover:underline"
+          className="text-black dark:text-gray-200 hover:underline transition-colors duration-200"
         >
           X
         </a>
@@ -59,13 +48,13 @@ export default function Home() {
           href="https://github.com/hamburger39"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-800 hover:underline"
+          className="text-gray-800 dark:text-gray-200 hover:underline transition-colors duration-200"
         >
           GitHub
         </a>
         <a
           href="mailto:khhira3229@gmail.com?subject=お問い合わせ"
-          className="text-blue-600 hover:underline"
+          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
         >
           Email
         </a>
