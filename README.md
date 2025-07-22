@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Lint・フォーマット方針
+
+- コード品質チェックには **ESLint** を使用しています（`eslint.config.mjs`参照）。
+- フォーマットには **Biome** を利用しています（`.vscode/settings.json`でデフォルトフォーマッタ指定、`Biomefile`参照）。
+- 推奨コマンド:
+  - Lint: `npx eslint .`
+  - フォーマット: `npx biome check .` またはエディタの保存時自動整形
