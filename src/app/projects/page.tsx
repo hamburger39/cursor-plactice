@@ -1,4 +1,4 @@
-import Wrap from "./components/Wrap";
+import Wrap from "../components/Wrap";
 
 export default function Projects() {
   return (
@@ -12,4 +12,6 @@ export default function Projects() {
       </main>
     </Wrap>
   );
-} 
+}
+
+

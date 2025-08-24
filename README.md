@@ -42,3 +42,34 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - 推奨コマンド:
   - Lint: `npx eslint .`
   - フォーマット: `npx biome check .` またはエディタの保存時自動整形
+
+## Backend (Go + Echo)
+
+フロントと同一リポジトリ内に `backend` ディレクトリとしてGo(Echo)のAPIサーバを追加しています。
+
+### 起動方法（Docker）
+
+```bash
+cd backend
+docker build -t portfolio-backend .
+docker run --rm -p 8080:8080 portfolio-backend
+```
+
+### 起動方法（ローカル Go 1.22+）
+
+```bash
+cd backend
+go run ./cmd/server
+```
+
+### エンドポイント
+
+- `GET /healthz`
+- `GET /api/profile`
+- `GET /api/projects`
+- `GET /api/projects/:id`
+- `POST /api/contact` { name, email, message }
+
+### Next.js からのアクセス
+
+`next.config.ts` の `rewrites` により、フロントの `/api/*` へのアクセスは `http://localhost:8080/api/*` にプロキシされます。
